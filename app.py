@@ -30,3 +30,15 @@ async def convert_image(file: UploadFile = File(...)):
         raise HTTPException(
             status_code=500, detail=f"Errore durante la conversione: {e}"
         )
+
+
+# create / endpoint
+@app.get("/")
+async def read_root():
+    return {"welcome": "HEIC to JPEG converter"}
+
+
+# implement 404 for all other routes
+@app.get("/{path:path}")
+async def read_path(path: str):
+    raise HTTPException(status_code=404, detail="Route not found")
