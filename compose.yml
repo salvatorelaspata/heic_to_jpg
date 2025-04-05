@@ -1,6 +1,6 @@
 services:
-  heic-to-jpg:
+  remove-bg:
     build: .
     ports:
       - "8001:8001"
-    container_name: heic-to-jpg
+    container_name: remove-bg
