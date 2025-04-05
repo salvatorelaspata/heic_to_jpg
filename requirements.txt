@@ -1,6 +1,5 @@
 fastapi
-python-multipart
-pillow
-rembg
 uvicorn
-onnxruntime
+pillow
+pillow-heif
+python-multipart
